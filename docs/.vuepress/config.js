@@ -106,8 +106,8 @@ module.exports = {
           sidebarDepth: 0,
           children: [
             "install/",
+            ["k8s/helm", "Kubernetes"],
             "install/binary",
-            "install/helm",
             "install/from-source",
           ],
         },
@@ -132,18 +132,27 @@ module.exports = {
         },
         "client",
         {
+          title: "Kubernetes",
+          collapsable: false,
+          path: "/docs/k8s/",
+          type: "group",
+          sidebarDepth: 0,
+          children: [
+            "k8s/",
+            "k8s/helm"
+          ]
+        },
+        {
           title: "Topics",
-          collapsable: true,
+          collapsable: false,
           path: "/docs/topics/",
           type: "group",
-          collapsable: false,
-          sidebarDepth: 1,
+          sidebarDepth: 0,
           children: [
             "topics/certificates",
             "topics/data-storage",
             "topics/getting-users-identity",
             "topics/original-request-context",
-            "topics/kubernetes-integration",
             "topics/production-deployment",
             "topics/programmatic-access",
             "topics/tcp-support",
